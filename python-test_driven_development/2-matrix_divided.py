@@ -12,17 +12,24 @@ def matrix_divided(matrix, div):
 
     Each element is divided and rounded to 2 decimal places.
     """
-    if (
-        not isinstance(matrix, list)
-        or matrix == []
-        or any(not isinstance(row, list) or row == [] for row in matrix)
+    if not isinstance(matrix, list) or matrix == []:
+        raise TypeError(
+            "matrix must be a matrix (list of lists) of integers/floats"
+        )
+    if any(
+        not isinstance(row, list) or row == []
+        for row in matrix
     ):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError(
+            "matrix must be a matrix (list of lists) of integers/floats"
+        )
 
     row_size = len(matrix[0])
     for row in matrix:
         if len(row) != row_size:
-            raise TypeError("Each row of the matrix must have the same size")
+            raise TypeError(
+                "Each row of the matrix must have the same size"
+            )
         for item in row:
             if type(item) not in (int, float):
                 raise TypeError(
@@ -34,4 +41,7 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    return [[round(item / div, 2) for item in row] for row in matrix]
+    return [
+        [round(item / div, 2) for item in row]
+        for row in matrix
+    ]
