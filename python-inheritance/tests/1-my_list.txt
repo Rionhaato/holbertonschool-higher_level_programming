@@ -11,3 +11,23 @@
 [1, 2, 3, 4, 5]
 >>> print(my_list)
 [1, 4, 2, 3, 5]
+
+>>> empty_list = MyList()
+>>> print(empty_list)
+[]
+>>> empty_list.print_sorted()
+[]
+>>> print(empty_list)
+[]
+
+>>> neg_list = MyList()
+>>> neg_list.append(3)
+>>> neg_list.append(-2)
+>>> neg_list.append(7)
+>>> neg_list.append(0)
+>>> print(neg_list)
+[3, -2, 7, 0]
+>>> neg_list.print_sorted()
+[-2, 0, 3, 7]
+>>> print(neg_list)
+[3, -2, 7, 0]
