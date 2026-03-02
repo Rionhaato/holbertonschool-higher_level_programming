@@ -36,6 +36,7 @@ By completing these tasks, you should be able to explain:
 
 ## Files and Tasks
 
+- `0-list_databases.sql`: List all databases on the MySQL server.
 - `1-create_database_if_missing.sql`: Create database `hbtn_0c_0` if missing.
 - `2-remove_database.sql`: Drop database `hbtn_0c_0` if it exists.
 - `3-list_tables.sql`: List all tables in the current database.
@@ -60,6 +61,7 @@ Run scripts from this directory using MySQL CLI.
 Examples:
 
 ```bash
+cat 0-list_databases.sql | mysql -uroot
 cat 1-create_database_if_missing.sql | mysql -uroot
 cat 4-first_table.sql | mysql -uroot hbtn_0c_0
 cat 10-top_score.sql | mysql -uroot hbtn_0c_0
