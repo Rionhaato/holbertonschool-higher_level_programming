@@ -1,7 +1,6 @@
 fetch('https://swapi-api.hbtn.io/api/people/5/?format=json')
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    document.querySelector('#character').textContent = data.name;
+  .then(response => response.json())
+  .then(CharacterData => {
+    const characterBox = document.querySelector('#character');
+    characterBox.textContent = CharacterData.name;
   });
