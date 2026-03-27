@@ -1,11 +1,12 @@
-document.querySelector('#toggle_header').addEventListener('click', function () {
-  const header = document.querySelector('header');
+const toggleButton = document.querySelector('#toggle_header');
+const headerTag = document.querySelector('header');
 
-  if (header.classList.contains('red')) {
-    header.classList.remove('red');
-    header.classList.add('green');
+toggleButton.addEventListener('click', () => {
+  if (headerTag.classList.contains('green')) {
+    headerTag.classList.remove('green');
+    headerTag.classList.add('red');
   } else {
-    header.classList.remove('green');
-    header.classList.add('red');
+    headerTag.classList.remove('red');
+    headerTag.classList.add('green');
   }
 });
