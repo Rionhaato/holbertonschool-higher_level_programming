@@ -30,7 +30,13 @@ This project introduces server-side rendering (SSR) in Python using Flask and Ji
 ## Files
 
 - `task_00_intro.py`: Generates invitation files from a template and attendee data.
+- `task_01_jinja.py`: Flask app that renders basic pages with shared templates.
 - `template.txt`: Base invitation template used for Task 0.
+- `templates/header.html`: Shared page header with navigation links.
+- `templates/footer.html`: Shared page footer.
+- `templates/index.html`: Home page template.
+- `templates/about.html`: About page template.
+- `templates/contact.html`: Contact page template.
 
 ## How to Run Task 0
 
@@ -78,6 +84,20 @@ Expected result:
 - Missing values are replaced with `"N/A"`.
 - Empty or invalid inputs print an error message and stop without creating files.
 
+## How to Run Task 1
+
+From the `python-server_side_rendering` directory:
+
+```bash
+python3 task_01_jinja.py
+```
+
+Then open these routes in your browser:
+
+- `http://127.0.0.1:5000/`
+- `http://127.0.0.1:5000/about`
+- `http://127.0.0.1:5000/contact`
+
 ## Task Breakdown
 
 ### Task 0: Creating a Simple Templating Program
@@ -94,12 +114,25 @@ What it does:
 
 Status: Completed
 
+### Task 1: Creating a Basic HTML Template in Flask
+
+File: `task_01_jinja.py`
+
+What it does:
+
+- Creates a basic Flask application running on port `5000`.
+- Renders `index.html`, `about.html`, and `contact.html`.
+- Reuses `header.html` and `footer.html` across all pages with Jinja `{% include %}`.
+- Provides navigation links for Home, About, and Contact pages.
+
+Status: Completed
+
 ## Suggested Commit Structure
 
 Use one commit per task:
 
 - `Task 0: add invitation templating program`
-- `Task 1: ...`
+- `Task 1: add Flask templates with shared header and footer`
 - `Task 2: ...`
 - `Task 3: ...`
 - `Task 4: ...`
